@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ccnu.hiic.activity.NodeRegistActivity"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+
+            android:weightSum="3"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="蜂场名称: "
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/floor_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.55"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <View
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="节点类型: "
+                android:textSize="20sp"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/type_choice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.55"
+                android:contextClickable="true"/>
+        </LinearLayout>
+
+        <View
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="节点编号: "
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/node_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.55"
+                android:textSize="20sp"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:gravity="center"
+                android:digits="@string/filter_vcode"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_temp_humi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="蜂  箱  编  号: "
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/room_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.55"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="温度报警阈值: "
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.55"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/temp_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="30dp"
+                    android:background="@color/text_black"/>
+
+                <EditText
+                    android:id="@+id/temp_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="℃  "
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="湿度报警阈值: "
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.55"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/humi_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="30dp"
+                    android:background="@color/text_black"/>
+
+                <EditText
+                    android:id="@+id/humi_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RH"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="温度控制阈值: "
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.55"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/temp2_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="30dp"
+                    android:background="@color/text_black"/>
+
+                <EditText
+                    android:id="@+id/temp2_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="℃  "
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1.2"
+                android:text="湿度控制阈值: "
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.55"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/humi2_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="30dp"
+                    android:background="@color/text_black"/>
+
+                <EditText
+                    android:id="@+id/humi2_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RH"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_add_node"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_selector"
+        android:text="提交"
+        android:textSize="@dimen/text_large_size"
+        android:textColor="#ffffff" />
+</LinearLayout>

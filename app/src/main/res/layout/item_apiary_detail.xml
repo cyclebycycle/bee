@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/it_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_margin="0.2dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@color/listview_bg"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/it_apiary_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_margin="0.5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@color/listview_bg"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/it_offline_num"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_margin="0.5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@color/listview_bg"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/it_abnormal_num"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_margin="0.5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@color/listview_bg"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

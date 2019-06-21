@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/main_toolbar"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/phone"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space_20"
+        android:paddingLeft="@dimen/text_size_25"
+        android:paddingRight="@dimen/text_size_25"
+        android:paddingBottom="@dimen/text_size_20">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_20"
+                android:text="@string/tel_old" />
+
+            <EditText
+                android:id="@+id/tel_old"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:ems="7"
+                android:enabled="false"
+                android:inputType="phone"
+                android:textSize="@dimen/text_size_20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="1dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tel_new"
+                android:textSize="@dimen/text_size_20"
+                tools:layout_editor_absoluteX="79dp"
+                tools:layout_editor_absoluteY="100dp" />
+
+            <EditText
+                android:id="@+id/tel_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="7"
+                android:hint="请输入新手机号"
+                android:gravity="center"
+                android:inputType="phone"
+                android:textSize="@dimen/text_size_20" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_selector"
+        android:text="@string/confirm"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_20" />
+
+
+</LinearLayout>

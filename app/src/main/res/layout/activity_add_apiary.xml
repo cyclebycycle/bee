@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_toolbar"/>
+
+    <EditText
+        android:id="@+id/et_apiaryname"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        android:drawablePadding="16dp"
+        android:hint="@string/hint_apiaryname"
+        android:paddingLeft="16dp"
+        android:singleLine="true"
+        android:textSize="@dimen/text_middle_size"
+        android:layout_marginTop="20dp"/>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:background="#cccccc" />-->
+
+
+    <RadioGroup
+        android:id="@+id/rg_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"/>
+
+
+    <Button
+        android:id="@+id/bt_add_apiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_selector"
+        android:text="添加"
+        android:textSize="@dimen/text_large_size"
+        android:textColor="#ffffff" />
+</LinearLayout>

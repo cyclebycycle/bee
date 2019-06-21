@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ccnu.hjjc">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.ccnu.hiic.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.ccnu.hiic.activity.LoginActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.ccnu.hiic.service.NotificationCollectorService"
+            android:label="NotificationMonitor"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.ccnu.hiic.service.BootBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- <category android:name="android.intent.category.HOME" /> -->
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ccnu.hiic.activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.ccnu.hiic.activity.RegisterActivity" />
+        <activity android:name="com.ccnu.hiic.activity.AdminRegisterActivity2" />
+        <activity android:name="com.ccnu.hiic.activity.AdminGetClientActivity" />
+        <activity android:name="com.ccnu.hiic.activity.NodeRegistActivity" />
+        <activity android:name="com.ccnu.hiic.activity.AddClientActivity" />
+        <activity android:name="com.ccnu.hiic.activity.AdminRegisterActivity" />
+        <activity android:name="com.ccnu.hiic.activity.ChangeNumberActivity" />
+        <activity android:name="com.ccnu.hiic.activity.ChangeMailActivity" />
+        <activity android:name="com.ccnu.hiic.activity.ChangePasswordActivity" />
+        <activity android:name="com.ccnu.hiic.activity.NodeDetialActivity" />
+        <activity android:name="com.ccnu.hiic.activity.MessConfigActivity" />
+        <activity
+            android:name="com.ccnu.hiic.activity.AreaDetialActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.ccnu.hiic.activity.SettingActivity" />
+        <activity android:name="com.ccnu.hiic.activity.ApiaryDetialActivity" />
+        <activity android:name="com.ccnu.hiic.activity.AddApiaryActivity"></activity>
+    </application>
+
+</manifest>

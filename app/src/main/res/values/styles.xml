@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
+
+    <style name="footer_bar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="main_footer_bar_radio" parent="footer_bar">
+        <item name="android:paddingTop">@dimen/space_5</item>
+        <item name="android:paddingBottom">@dimen/space_3</item>
+        <item name="android:drawablePadding">@dimen/space_5</item>
+        <item name="android:background">@color/footer_background_color</item>
+        <item name="android:textColor">@drawable/footer_text_color</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+    </style>
+
+    <style name="fragment_user">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.6</item>
+        <item name="android:paddingLeft">@dimen/space_10</item>
+        <item name="android:paddingRight">@dimen/space_10</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>  <!--设置不覆盖锚点-->
+        <item name="android:popupBackground">@color/main_bg</item> <!--更改背景颜色-->
+    </style>
+
+
+    <!--标题栏字体设置-->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_size_24</item>
+    </style>
+
+</resources>

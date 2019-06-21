@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ccnu.hiic.activity.AdminGetClientActivity"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/main_toolbar"/>
+
+        <TextView
+            android:id="@+id/tv_topinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/background_color"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="欢迎您进入蜂箱管理系统，该区域蜂场信息如下："
+            android:textColor="#005661"
+            android:textSize="18sp"/>
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0.5dp"
+            android:background="#f0e1a6"
+            android:orientation="vertical"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_margin="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#c4ba6d"
+                    android:text="养蜂人"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_margin="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#c4ba6d"
+                    android:text="蜂场名"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_margin="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#c4ba6d"
+                    android:text="离线个数"
+                    android:textColor="#fff"
+                    android:textAlignment="center"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_margin="0.5dp"
+                    android:layout_weight="1"
+                    android:background="#c4ba6d"
+                    android:text="异常个数"
+                    android:textColor="#fff"
+                    android:textAlignment="center"
+                    android:textSize="20dip" />
+
+
+
+            </TableRow>
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/lv_apiary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#e7e7e7"
+            android:background="@color/white"
+            android:listSelector="@android:color/transparent"
+            android:dividerHeight="0.5dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_add_apiary"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/add_client"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
